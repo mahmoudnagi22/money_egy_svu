@@ -27,7 +27,7 @@ def Padding(image): # padding to constant sizes (292,548)
     return image
 
 ### The path to the selected images
-path = "/content/Egy-money-recognition/imagess"
+path = "/content/money_egy_svu/imagess"
 ### Pre-definitions 
 valid_x = [".jpg",".jpeg",".png",".tga",".bmp"] # valid image extensions
 num_x = len(os.listdir(path))
@@ -117,7 +117,7 @@ tbCallBack = keras.callbacks.TensorBoard(log_dir='./', histogram_freq=0, write_g
 # (training of the model)
 # passing the training data and validation data along with how many examples to evaluate at a time "batch_size" and to loop over data how many times "epochs"
 # and shuffle the data help for a faster convergence and better accuracies
-model.load_weights('/content/Egy-money-recognition/weightsCNN/weights-31-0.99.hdf5')
+model.load_weights('/content/money_egy_svu/weightsCNN/weights-31-0.99.hdf5')
 #model.fit(x_train, y_train, validation_data=(x_val,y_val), batch_size=32, epochs=5, verbose=2, shuffle=True, callbacks=[checkpoint,tbCallBack])
 
 
